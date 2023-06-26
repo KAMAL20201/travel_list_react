@@ -3,7 +3,9 @@ import React from "react";
 function Stats({items}) {
   const packeditems=items.filter((item)=>item.packed===true);
   
-  const percentage=((packeditems.length/items.length)*100).toFixed(2);
+  let percentage=0;
+  if(items.length!==0)
+  percentage=((packeditems.length/items.length)*100).toFixed(2);
 
   const packedItemslength=packeditems.length;
  

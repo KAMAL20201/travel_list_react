@@ -22,6 +22,12 @@ function App() {
     );
     setItems(updatedItems);
   };
+  
+  const clearListHandler=()=>{
+    const confirmed=window.confirm("Are you sure you want to clear the list?");
+    if(confirmed)
+    setItems([]);
+  }
 
   return (
     <div className="app">
@@ -32,6 +38,7 @@ function App() {
           initialItems={items}
           onRemovingItem={removeHandler}
           onCheckboxChange={handleCheckboxChange}
+          onClearList={clearListHandler}
         />
       ) : (
         <p className="no-items">Add Some Items In Your Packing List</p>
