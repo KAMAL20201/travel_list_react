@@ -2,7 +2,7 @@ import React,{useState} from "react";
 
 function Item({ item,onRemove,onCheckboxChange  }) {
 
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(item.packed);
 
   const handleCheckboxChange = (event) => {
     setIsChecked(event.target.checked);
@@ -21,7 +21,7 @@ function Item({ item,onRemove,onCheckboxChange  }) {
       <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange}/>
       <span style={item.packed ? { textDecoration: "line-through" } : {}}>
         {" "}
-        {item.quantity} {item.description}
+        {item.quantity} {item.item_name}
       </span>
       <button onClick={deleteHandler}>❌</button>
     </li>

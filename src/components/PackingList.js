@@ -19,7 +19,7 @@ function PackingList({ initialItems, onRemovingItem, onCheckboxChange,onClearLis
   if (selectedOption === "description") {
     sortedItems = initialItems
       .slice()
-      .sort((a, b) => a.description.localeCompare(b.description));
+      .sort((a, b) => a.item_name.localeCompare(b.item_name));
   }
   if(selectedOption === "packed"){
     sortedItems = initialItems
@@ -33,7 +33,7 @@ function PackingList({ initialItems, onRemovingItem, onCheckboxChange,onClearLis
         {sortedItems.map((item) => (
           <Item
             item={item}
-            key={item.id}
+  
             onRemove={deleteItemHandler}
             onCheckboxChange={onCheckboxChange}
           />

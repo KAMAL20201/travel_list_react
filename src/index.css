@@ -76,6 +76,11 @@ input {
 
 .ulist{
   display: flex;
+  flex-wrap: wrap;
+}
+.form-con {
+  display: flex;
+  gap: 10px;
 }
 .list{
   display: flex;
