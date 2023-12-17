@@ -1,9 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
-import { REACT_APP_SUPABASE_KEY } from "./constants";
-
-export const supabaseUrl = 'https://jcdpcvahbtdwcxmukwyn.supabase.co';
+import { REACT_APP_SUPABASE_KEY, REACT_APP_SUPABASE_URL } from "./constants";
 
 export const supabase = createClient(
-    supabaseUrl,
+    REACT_APP_SUPABASE_URL,
     REACT_APP_SUPABASE_KEY
 );
